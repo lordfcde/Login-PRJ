@@ -25,6 +25,7 @@
         <div class="container">
             <div class="jumbotron">
                 <h1>This is Human Type</h1>
+                <h1>Welcome to Saigons</h1>
                 <table class="table table-striped">
                     <tr>
                         <td>Type ID</td>
