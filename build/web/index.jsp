@@ -24,7 +24,7 @@
         <%@include file="menu.jspf" %>
         <div class="container">
             <div class="jumbotron">
-                <h1>Danh sách Human Type đây</h1>
+                <h1>This is Human Type</h1>
                 <table class="table table-striped">
                     <tr>
                         <td>Type ID</td>
