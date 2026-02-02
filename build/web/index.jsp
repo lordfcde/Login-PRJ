@@ -24,7 +24,8 @@
         <%@include file="menu.jspf" %>
         <div class="container">
             <div class="jumbotron">
-                <h1>Danh sách Human Type đây</h1>
+                <h1>Welcome to ${sessionScope.ttdn.gender?"Mr:":'Ms '} <span style="color: green"> ${sessionScope.ttdn.humanName}</span></h1>
+                <h1>Danh sách Human Type đây</h1> 
                 <table class="table table-striped">
                     <tr>
                         <td>Type ID</td>
@@ -38,10 +39,10 @@
                             <td>${i.typeId}</td>
                             <td>${i.typeName}</td>
                             <td>
-                                <c:url var = "urlUpdate" value = "update_loai?typeId=${i.typeId}"></c:url>
+                                <c:url var = "urlUpdate" value = "MainController?action=upd&typeId=${i.typeId}"></c:url>
                                 <a href="${urlUpdate}" class="btn btn-primary">Update                                                                    
                                </a>
-                                <c:url var="lkDelete" value = "xoa_loai?typeId=${i.typeId} "></c:url>
+                                <c:url var="lkDelete" value = "MainController?action=del&typeId=${i.typeId} "></c:url>
                                 <a href="${lkDelete}"class="btn btn-danger" onclick="return confirm('Are u sure my bro ;')">
                                     Delete</a>
                             </td>

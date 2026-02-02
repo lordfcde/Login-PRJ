@@ -52,10 +52,10 @@ public class DaoHuman implements Workable<DtoHuman> {
             //------2. Tạo Statement
             Statement cmd = conn.createStatement();
             //------3. Viết SQL Comment, thi hành & nhận kết quả 
-            String sqlCommand = "Select humanId , humanName , dob , gender, typeID , "
-                    + "userHuman , passHuman, role, isActive "
-                    + "FROM Human "
-                    + "WHERE userHuman = '"+ user +"' 'and passHuman = '"+ pass +"' ";
+            String sqlCommand = "Select humanId, humanName, dob, gender, typeId, "
+                    + "userHuman, passHuman"
+                    + " FROM Human "
+                    + "WHERE userHuman = '"+ user +"' and passHuman ='"+ pass +"' ";
                     
                   
             ResultSet rs = cmd.executeQuery(sqlCommand);
@@ -74,8 +74,8 @@ public class DaoHuman implements Workable<DtoHuman> {
                 ///---------------------------------
                 String userHuman = rs.getString("userHuman");
                 String passHuman = rs.getString("passHuman");
-                String role = rs.getString("role");
-                boolean active = rs.getBoolean("isActive");
+                String role = "test";
+                boolean active = true;
                //4.2 0------ Đóng gói thành dtoHuman object
                result = new DtoHuman(humanId, humanName, dob, gender, type, userHuman, passHuman, role, active);
             }

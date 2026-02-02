@@ -22,7 +22,7 @@
     <body>
          <%@include file="menu.jspf" %>
          <h1>Update Human Type</h1>
-        <form class="form-horizontal"  method="post" action="update_loai">
+        <form class="form-horizontal"  method="post" action="MainController?action=upd">
             <div class="form-group">
                 <label class="control-label col-sm-2" for="id">ID:</label>
                 <div class="col-sm-10">

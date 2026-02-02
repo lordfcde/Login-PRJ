@@ -4,6 +4,7 @@
     Author     : vinhh
 --%>
 
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -18,7 +19,7 @@
 
 <h2>Login Form</h2>
 
-<form action="index.jsp" method="post">
+<form action="MainController?action=dn" method="post">
   <div class="imgcontainer">
     <img src="https://bhd.1cdn.vn/thumbs/600x315/2024/10/25/cover(1).jpg" alt="Avatar" class="avatar">
   </div>
@@ -28,7 +29,7 @@
     <input type="text" placeholder="Enter Username" name="uname" required>
 
     <label for="psw"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="psw" required>
+    <input type="password" placeholder="Enter Password" name="pwd" required>
         
     <button type="submit">Login</button>
     <label>
@@ -36,10 +37,17 @@
     </label>
   </div>
 
-  <div class="container" style="background-color:#f1f1f1">
+  <div class="container">
+       
     <button type="button" class="cancelbtn">Cancel</button>
     <span class="psw">Forgot <a href="#">password?</a></span>
   </div>
+    <c:if test="${not empty requestScope.err}">
+        <div class="container" style="background-color:#f1f1f1"><!-- comment -->
+            <p style = "color: red">${requestScope.err}</p>
+            </div>        
+    </c:if>
+ 
 </form>
 
 </body>

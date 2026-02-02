@@ -1,23 +1,27 @@
 
- <nav class="navbar navbar-inverse">
-            <div class="container-fluid">
-                <div class="navbar-header">
-                    <a class="navbar-brand" href="#">Web Tính toán </a>
-                </div>
-                <ul class="nav navbar-nav">
-                  <li><a href="dsCacLoai">Home</a></li>
-                    <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Human
-                            <span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="hinhTron.html">Hình tron</a></li>
-                            <li><a href="dsCacLoai">list of human Type</a></li>
-                            <li><a href="NewType.jsp">New Type</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="XemDanhSachHuman">Human List</a></li>
-                    <li><a href="PoemImg.html">Th?</a></li>
-                    <li><a href="PoemImg.html">?nh</a></li>
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">Web Tính toán </a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li><a href="dsCacLoai">Home</a></li>
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Human
+                    <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="hinhTron.html">Hình tron</a></li>
+                    <li><a href="MainController?action=list">list of human Type</a></li>
+                    <li><a href="NewType.jsp">New Type</a></li>
                 </ul>
-            </div>
-        </nav>
+            </li>
+            <li><a href="XemDanhSachHuman">Human List</a></li>
+            <li><a href="PoemImg.html">Th?</a></li>
+            <li><a href="PoemImg.html">?nh</a></li>
+
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <li><a href="#"><span class="glyphicon glyphicon-user"></span> Register</a></li>
+            <li><a href="MainController?action=dx"><span class="glyphicon glyphicon-log-out"></span> LogOut</a></li>
+    </div>
+</nav>
